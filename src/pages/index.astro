@@ -1,15 +1,14 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import * as Plot from "@observablehq/plot";
-import PlotFigure from "./PlotFigure.astro";
-import penguins from "./penguins.json";
+import PlotFigure from "../components/PlotFigure.astro";
+import penguins from "../assets/penguins/penguins.json";
 
 ---
 
 <Layout>
   <div>
-    <h1>Penguins</h1>
+    <h1>Voici une représentation des Penguins</h1>
     <PlotFigure
       options={{
         marks: [

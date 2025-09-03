@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import * as Plot from "@observablehq/plot";
+import PlotFigure from "../components/PlotFigure.astro";
+import diamonds from "../assets/diamonds/diamonds.json";
+---
+
+<Layout>
+  <div>
+    <h1 class="text-2xl font-bold m-3">Voici une représentation des diamants</h1>
+    <PlotFigure
+      options={{
+        grid: true,
+        color: { legend: true },
+        marks: [
+          Plot.dot(diamonds, {
+            x: "carat",
+            y: "cut",
+            stroke: "cut",
+            fill: "cut",
+            title: (d) => `${d.cut}\nCut ${d.carat }`,
+          }),
+        ],
+      }}
+    />
+  </div>
+</Layout>

@@ -3,18 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "../components/PlotFigure.astro";
 import penguins from "../assets/penguins/penguins.json";
-
 ---
 
 <Layout>
-  <div>
-    <h1>Voici une représentation des Penguins</h1>
-    <PlotFigure
-      options={{
-        marks: [
-          Plot.dot(penguins, { x: "culmen_length_mm", y: "culmen_depth_mm" }),
-        ],
-      }}
-    />
-  </div>
+<h1>Bienvenue sur mon site ayant pour but de représenter des données</h1>
 </Layout>
